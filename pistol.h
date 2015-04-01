@@ -1,0 +1,27 @@
+/*
+This is the header file for the class 'Pistol'.
+The class 'Pistol' is derived from the class 'Handgun'
+which is derived from the class 'Gun'.
+*/
+
+#ifndef PISTOL_H
+#define PISTOL_H
+
+#include <string>
+using std::string;
+#include "handgun.h"
+
+namespace gunsMMoore{
+  class Pistol{
+    public:
+      Pistol();
+      Pistol(const string& theManufacturer, const string& theCaliber, const string& theGrips, const string& theSights, bool theLaser, bool theSemiauto);
+      bool getSemiauto() const;
+      void setSemiauto(bool theSemiauto);
+      string printSemiauto();
+    private:
+      bool semiauto;
+  };
+}
+
+#endif //PISTOL_H
