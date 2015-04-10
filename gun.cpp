@@ -16,8 +16,8 @@ namespace gunsMMoore{
   string Gun::getCaliber() const {return caliber;}
   
   void Gun::setManufacturer(const string& theManufacturer)
-  {manufacturer = theManufacturer}
+  {manufacturer = theManufacturer;}
   
   void Gun::setCaliber(const string& theCaliber)
-  {caliber = theCaliber}
+  {caliber = theCaliber;}
 }
