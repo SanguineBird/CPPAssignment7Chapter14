@@ -30,7 +30,7 @@ namespace gunsMMoore{
   {laser = theLaser;}
   
   string Handgun::printLaser(){
-    if (laser())
+    if (laser)
       return "laser";
     else
       return "no laser";
