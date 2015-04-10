@@ -12,7 +12,7 @@ using std::string;
 #include "handgun.h"
 
 namespace gunsMMoore{
-  class Pistol{
+  class Pistol : public Handgun{
     public:
       Pistol();
       Pistol(const string& theManufacturer, const string& theCaliber, const string& theGrips, const string& theSights, bool theLaser, bool theSemiauto);
