@@ -1,16 +1,16 @@
 /*This is the implementation file for the class 'Revolver'.*/
 
 #include <string> //string, to_string
-using std::string;
-using std::to_string;
+#include <iostream> //cout, endl
+using namespace std;
 #include "revolver.h"
 
 namespace gunsMMoore{
 
-  Revolver::Revolver() : Gun(), Handgun(), singleAction(false), numberOfRounds(0)
+  Revolver::Revolver() : Handgun(), singleAction(false), numberOfRounds(0)
   {/*deliberately empty*/}
   
-  Revolver::Revolver(const string& theManufacturer, const string& theCaliber, const string& theGrips, const string& theSights, bool theLaser, bool theSingleAction, int theNumberOfRounds) : Gun(theManufacturer, theCaliber), Handgun(theGrips, theSights, theLaser), singleAction(theSingleAction), numberOfRounds(theNumberOfRounds)
+  Revolver::Revolver(const string& theManufacturer, const string& theCaliber, const string& theGrips, const string& theSights, bool theLaser, bool theSingleAction, int theNumberOfRounds) : Handgun(theManufacturer, theCaliber, theGrips, theSights, theLaser), singleAction(theSingleAction), numberOfRounds(theNumberOfRounds)
   {/*deliberately empty*/}
   
   bool Revolver::getSingleAction() const
@@ -26,14 +26,13 @@ namespace gunsMMoore{
   {numberOfRounds = theNumberOfRounds;}
   
   string Revolver::printSingleAction(){
-    if (singleAction())
+    if (singleAction)
       return "single action";
     else
       return "double action";
   }
   
-  string Revolver::printNumberOfRounds(){
-    string display = to_string(numberOfRounds) + " shot";
-    return display;
+  void Revolver::printNumberOfRounds(){
+    cout << numberOfRounds << " rounds";
   }
 }
