@@ -12,7 +12,7 @@ using std::string;
 #include "handgun.h"
 
 namespace gunsMMoore{
-  class Revolver{
+  class Revolver : public Handgun{
     public:
       Revolver();
       Revolver(const string& theManufacturer, const string& theCaliber, const string& theGrips, const string& theSights, bool theLaser, bool theSingleAction, int theNumberOfRounds);
@@ -21,7 +21,7 @@ namespace gunsMMoore{
       void setSingleAction(bool theSingleAction);
       void setNumberOfRounds(int theNumberOfRounds);
       string printSingleAction();
-      string printNumberOfRounds();
+      void printNumberOfRounds();
     private:
       bool singleAction;
       int numberOfRounds;
